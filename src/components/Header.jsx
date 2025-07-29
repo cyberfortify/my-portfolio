@@ -69,7 +69,7 @@ const Header = () => {
           >
             <div className="w-3 h-3 rounded-full bg-cyan-400"></div>
             <span className="text-xl font-bold text-white tracking-tighter">
-              Aditya<span className="text-cyan-400">.</span>
+              Aditya
             </span>
           </motion.div>
 

@@ -13,9 +13,10 @@ const Projects = () => {
   const filters = [
     { id: 'all', name: 'All Projects' },
     { id: 'web', name: 'Web Apps' },
-    { id: 'mobile', name: 'Mobile' },
     { id: 'fullstack', name: 'Full Stack' },
-    { id: 'design', name: 'UI/UX' },
+    { id: 'data', name: 'Data Analysis' },
+    { id: 'automation', name: 'Automation' },
+    { id: 'design', name: 'UI/UX & Design' },
   ];
 
   const projects = [
@@ -87,8 +88,8 @@ const Projects = () => {
     },
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -97,11 +98,11 @@ const Projects = () => {
       <div className="absolute inset-0 z-0">
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-        
+
         {/* Glowing dots */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-[150px] opacity-5"></div>
         <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-purple-600 rounded-full filter blur-[120px] opacity-5"></div>
-        
+
         {/* Floating binary code */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -111,11 +112,11 @@ const Projects = () => {
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
             }}
-            animate={{ 
+            animate={{
               y: [0, -20, 0],
               opacity: [0.2, 0.8, 0.2]
             }}
-            transition={{ 
+            transition={{
               duration: 10 + Math.random() * 10,
               repeat: Infinity,
               ease: "easeInOut"
@@ -135,7 +136,7 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            My <span className="text-cyan-400">Work</span>
+            My <span className="text-cyan-400">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8"></div>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
@@ -144,7 +145,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Filters */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-3 mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -154,11 +155,10 @@ const Projects = () => {
           {filters.map((filter) => (
             <button
               key={filter.id}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                activeFilter === filter.id
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === filter.id
                   ? 'bg-cyan-500 text-white'
                   : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-              }`}
+                }`}
               onClick={() => setActiveFilter(filter.id)}
             >
               {filter.name}
@@ -171,9 +171,8 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              className={`relative group bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden ${
-                hoveredProject === project.id ? 'border-cyan-400/50' : ''
-              }`}
+              className={`relative group bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden ${hoveredProject === project.id ? 'border-cyan-400/50' : ''
+                }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -194,15 +193,15 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Project content */}
               <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-bold">{project.title}</h3>
                   <div className="flex space-x-2">
                     {project.github && (
-                      <a 
-                        href={project.github} 
+                      <a
+                        href={project.github}
                         className="text-gray-400 hover:text-cyan-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -211,8 +210,8 @@ const Projects = () => {
                       </a>
                     )}
                     {project.live && (
-                      <a 
-                        href={project.live} 
+                      <a
+                        href={project.live}
                         className="text-gray-400 hover:text-cyan-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -222,13 +221,13 @@ const Projects = () => {
                     )}
                   </div>
                 </div>
-                
+
                 <p className="text-gray-400 mb-4">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, i) => (
-                    <span 
-                      key={i} 
+                    <span
+                      key={i}
                       className="px-3 py-1 bg-gray-900/50 text-xs rounded-full text-gray-300"
                     >
                       {tag}
@@ -236,10 +235,10 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-              
+
               {/* Hover effect */}
               {hoveredProject === project.id && (
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 border-2 border-cyan-400/30 rounded-xl pointer-events-none"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -258,14 +257,14 @@ const Projects = () => {
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
         >
-           <Link to="/projects">
-          <button className="relative px-8 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg font-medium group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
-            <span className="relative z-10 flex items-center justify-center">
-              <FiCode className="mr-2" />
-              View All Projects
-            </span>
-          </button>
+          <Link to="/projects">
+            <button className="relative px-8 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg font-medium group overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
+              <span className="relative z-10 flex items-center justify-center">
+                <FiCode className="mr-2" />
+                View All Projects
+              </span>
+            </button>
           </Link>
         </motion.div>
       </div>

@@ -1,8 +1,8 @@
 // File: src/components/Skills.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaPython, FaFigma, FaDatabase, FaServer, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiTailwindcss, SiNextdotjs, SiRedux, SiGraphql, SiMongodb, SiPostgresql, SiKubernetes, SiGit, SiJest } from 'react-icons/si';
+import { FaRobot,FaGithub ,FaReact, FaNodeJs, FaPython, FaFigma, FaDatabase, FaServer, FaDocker,FaGitAlt,FaHtml5, FaCss3Alt,FaBootstrap } from 'react-icons/fa';
+import { SiFlask,SiMysql,SiPandas,SiPlotly,SiNumpy,SiJavascript, SiTypescript, SiTailwindcss, SiNextdotjs, SiRedux, SiGraphql, SiMongodb, SiPostgresql, SiKubernetes, SiGit, SiJest } from 'react-icons/si';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
@@ -10,40 +10,36 @@ const Skills = () => {
 
   const categories = [
     { id: 'frontend', name: 'Frontend', icon: <FaReact /> },
-    { id: 'backend', name: 'Backend', icon: <FaNodeJs /> },
-    { id: 'tools', name: 'Tools', icon: <FaDocker /> },
-    { id: 'design', name: 'Design', icon: <FaFigma /> },
+    { id: 'backend', name: 'Backend', icon: <FaPython /> },
+    { id: 'data', name: 'Data Science', icon: <SiNumpy /> },
+    { id: 'tools', name: 'Tools', icon: <FaGitAlt /> },
   ];
 
   const skills = {
     frontend: [
-      { name: 'React', icon: <FaReact />, level: 95, color: 'text-blue-400' },
-      { name: 'JavaScript', icon: <SiJavascript />, level: 90, color: 'text-yellow-400' },
+      { name: 'HTML', icon: <FaHtml5 />, level: 95, color: 'text-orange-500' },
+      { name: 'CSS', icon: <FaCss3Alt />, level: 90, color: 'text-blue-500' },
+      { name: 'Bootstrap', icon: <FaBootstrap />, level: 85, color: 'text-purple-500' },
       { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 92, color: 'text-teal-400' },
+      { name: 'JavaScript', icon: <SiJavascript />, level: 90, color: 'text-yellow-400' },
+      { name: 'React.js', icon: <FaReact />, level: 95, color: 'text-blue-400' },
     ],
     backend: [
-      { name: 'Node.js', icon: <FaNodeJs />, level: 90, color: 'text-green-500' },
-      { name: 'Python', icon: <FaPython />, level: 80, color: 'text-blue-600' },
-      { name: 'GraphQL', icon: <SiGraphql />, level: 75, color: 'text-pink-500' },
-      { name: 'MongoDB', icon: <SiMongodb />, level: 85, color: 'text-green-400' },
-      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 80, color: 'text-blue-400' },
-      { name: 'REST APIs', icon: <FaServer />, level: 90, color: 'text-gray-400' },
+      { name: 'Python', icon: <FaPython />, level: 90, color: 'text-yellow-500' },
+      { name: 'Flask', icon: <SiFlask />, level: 85, color: 'text-gray-700' },
+      { name: 'MySQL', icon: <SiMysql />, level: 80, color: 'text-blue-600' },
+    ],
+    data: [
+      { name: 'Numpy', icon: <SiNumpy />, level: 85, color: 'text-purple-600' },
+      { name: 'Pandas', icon: <SiPandas />, level: 88, color: 'text-black' },
+      { name: 'Matplotlib', icon: <SiPlotly />, level: 80, color: 'text-blue-800' },
+      { name: 'Seaborn', icon: <SiPlotly />, level: 75, color: 'text-teal-600' },
+      { name: 'Prompt Engineering', icon: <FaRobot />, level: 70, color: 'text-indigo-500' },
     ],
     tools: [
-      { name: 'Docker', icon: <FaDocker />, level: 80, color: 'text-blue-500' },
-      { name: 'Kubernetes', icon: <SiKubernetes />, level: 70, color: 'text-blue-400' },
-      { name: 'Git', icon: <SiGit />, level: 90, color: 'text-orange-500' },
-      { name: 'Jest', icon: <SiJest />, level: 85, color: 'text-red-500' },
-      { name: 'CI/CD', icon: <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold">CI</div>, level: 85, color: 'text-gray-300' },
+      { name: 'Git', icon: <FaGitAlt />, level: 90, color: 'text-orange-500' },
+      { name: 'GitHub', icon: <FaGithub />, level: 90, color: 'text-black' },
     ],
-    design: [
-      { name: 'Figma', icon: <FaFigma />, level: 85, color: 'text-purple-500' },
-      { name: 'UI Design', icon: <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>, level: 80, color: 'text-blue-400' },
-      { name: 'UX Research', icon: <div className="w-6 h-6 bg-gradient-to-r from-amber-400 to-red-500 rounded-full"></div>, level: 75, color: 'text-amber-400' },
-      { name: 'Prototyping', icon: <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-teal-500 rounded-full"></div>, level: 85, color: 'text-green-400' },
-      { name: 'Wireframing', icon: <div className="w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full"></div>, level: 90, color: 'text-gray-400' },
-      { name: 'Design Systems', icon: <div className="w-6 h-6 bg-gradient-to-r from-indigo-400 to-blue-500 rounded-full"></div>, level: 80, color: 'text-indigo-400' },
-    ]
   };
 
   return (
