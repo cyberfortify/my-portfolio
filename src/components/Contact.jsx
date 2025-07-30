@@ -1,4 +1,3 @@
-// File: src/components/Contact.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi';
@@ -109,9 +108,9 @@ const Contact = () => {
               
               <div className="space-y-6 mb-10">
                 {[
-                  { icon: <FiMail className="text-xl" />, title: "Email", info: "hello@example.com", link: "mailto:hello@example.com" },
+                  { icon: <FiMail className="text-xl" />, title: "Email", info: "work.aditya2010@gmail.com", link: "mailto:work.aditya2010@gmail.com" },
                   { icon: <FiPhone className="text-xl" />, title: "Phone", info: "+1 (123) 456-7890", link: "tel:+11234567890" },
-                  { icon: <FiMapPin className="text-xl" />, title: "Location", info: "San Francisco, CA", link: null }
+                  { icon: <FiMapPin className="text-xl" />, title: "Location", info: "Mumbai, India", link: null }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 mr-4">
@@ -138,9 +137,8 @@ const Contact = () => {
                 <h4 className="font-bold text-lg mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   {[
-                    { icon: <FiGithub />, link: "#", label: "GitHub" },
-                    { icon: <FiLinkedin />, link: "#", label: "LinkedIn" },
-                    { icon: <FiTwitter />, link: "#", label: "Twitter" },
+                    { icon: <FiGithub />, link: "https://github.com/cyberfortify/", label: "GitHub" },
+                    { icon: <FiLinkedin />, link: "https://www.linkedin.com/in/aditya-vk-professional/", label: "LinkedIn" },
                   ].map((social, index) => (
                     <motion.a
                       key={index}
@@ -154,36 +152,6 @@ const Contact = () => {
                     </motion.a>
                   ))}
                 </div>
-              </div>
-              
-              {/* Location visualization */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-xl overflow-hidden h-64 relative">
-                {/* Grid map */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-                
-                {/* Location marker */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <div className="w-8 h-8 bg-cyan-400 rounded-full animate-ping absolute opacity-20"></div>
-                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center relative">
-                      <FiMapPin className="text-white" />
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating buildings */}
-                {[...Array(6)].map((_, i) => (
-                  <div 
-                    key={i}
-                    className="absolute bg-gradient-to-t from-gray-800 to-gray-700 border border-gray-600"
-                    style={{
-                      width: `${Math.random() * 40 + 20}px`,
-                      height: `${Math.random() * 100 + 40}px`,
-                      bottom: '10%',
-                      left: `${10 + i * 15}%`,
-                    }}
-                  />
-                ))}
               </div>
             </div>
           </motion.div>
@@ -234,7 +202,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full bg-gray-900/50 border border-gray-700 rounded-lg py-4 px-5 text-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 transition"
-                        placeholder="John Doe"
+                        placeholder="Enter your name"
                       />
                       <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
                         <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
@@ -253,7 +221,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full bg-gray-900/50 border border-gray-700 rounded-lg py-4 px-5 text-white focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 transition"
-                        placeholder="john@example.com"
+                        placeholder="Enter your email"
                       />
                       <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
                         <FiMail />
