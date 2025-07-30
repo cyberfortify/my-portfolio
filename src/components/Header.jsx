@@ -51,11 +51,10 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gray-900/90 backdrop-blur-sm py-2"
-          : "bg-transparent py-4"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+        ? "bg-gray-900/90 backdrop-blur-sm py-2"
+        : "bg-transparent py-4"
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -72,6 +71,7 @@ const Header = () => {
               Aditya
             </span>
           </motion.div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
@@ -147,7 +147,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </div>
-    </motion.header>
+    </motion.header >
   );
 };
 
