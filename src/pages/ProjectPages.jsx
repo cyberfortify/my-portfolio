@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiCode, FiArrowLeft, FiSearch, FiFilter } from "react-icons/fi";
 import { FaReact, FaNodeJs, FaDatabase, FaPython } from "react-icons/fa";
 import {
+  SiSelenium,
   SiTypescript,
   SiTailwindcss,
   SiFirebase,
@@ -46,6 +47,18 @@ const ProjectPage = () => {
     },
     {
       id: 2,
+      title: "Naukri Profile Updater",
+      description:
+        "Automates the login and profile summary update on Naukri.com using Python and Selenium.",
+      tags: ["Python", "Selenium", "Automation"],
+      category: "automation",
+      image: "/project-images/naukri.jpg", 
+      github: "https://github.com/cyberfortify/naukri-profile-updater",
+      live: "", 
+      techIcons: [<FaPython />, <SiSelenium />]
+    },
+    {
+      id: 3,
       title: "Employee Report App",
       description:
         "Streamlit app to generate department-wise employee reports from Excel.",
@@ -57,7 +70,7 @@ const ProjectPage = () => {
       techIcons: [<FaPython />, <SiJupyter />],
     },
     {
-      id: 3,
+      id: 4,
       title: "Alibaba RFQ Scraper",
       description:
         "Web scraper for Alibaba RFQs using Python and BeautifulSoup.",
@@ -69,7 +82,7 @@ const ProjectPage = () => {
       techIcons: [<FaPython />],
     },
     {
-      id: 4,
+      id: 5,
       title: "3D Website Animation",
       description: "Scroll-based 3D animation website using Three.js and GSAP.",
       tags: ["HTML", "Three.js", "GSAP"],
@@ -80,7 +93,7 @@ const ProjectPage = () => {
       techIcons: [<SiHtml5 />, <SiJavascript />],
     },
     {
-      id: 5,
+      id: 6,
       title: "Employee Management System",
       description:
         "Full-stack system with CRUD functionality using React, Flask, MySQL.",
@@ -92,7 +105,7 @@ const ProjectPage = () => {
       techIcons: [<FaReact />, <SiFlask />, <FaDatabase />],
     },
     {
-      id: 6,
+      id: 7,
       title: "To-Do Flask App",
       description: "Simple task manager using Flask and MySQL.",
       tags: ["Flask", "MySQL"],
@@ -103,7 +116,7 @@ const ProjectPage = () => {
       techIcons: [<SiFlask />, <FaDatabase />],
     },
     {
-      id: 7,
+      id: 8,
       title: "YouTube Trending Analysis",
       description:
         "Data analysis of trending videos using Pandas and Matplotlib.",
@@ -115,7 +128,7 @@ const ProjectPage = () => {
       techIcons: [<FaPython />, <SiJupyter />],
     },
     {
-      id: 8,
+      id: 9,
       title: "Netflix Viewing Habits",
       description:
         "Insights on Netflix user behavior through data visualization.",
@@ -127,7 +140,7 @@ const ProjectPage = () => {
       techIcons: [<FaPython />, <SiJupyter />],
     },
     {
-      id: 9,
+      id: 10,
       title: "Superstore Sales Dashboard",
       description:
         "Data analysis of sales records from the Superstore dataset.",
@@ -139,7 +152,7 @@ const ProjectPage = () => {
       techIcons: [<FaPython />, <SiJupyter />],
     },
     {
-      id: 10,
+      id: 11,
       title: "AICTE Steganography",
       description:
         "Project using steganography to hide sensitive info in images.",

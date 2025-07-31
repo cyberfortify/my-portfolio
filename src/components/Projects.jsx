@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import { FaReact, FaNodeJs, FaDatabase, FaPython } from "react-icons/fa";
 import {
+  SiSelenium,
   SiTypescript,
   SiTailwindcss,
   SiFirebase,
@@ -33,6 +34,19 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Naukri Profile Updater",
+      description:
+        "Automates the login and profile summary update on Naukri.com using Python and Selenium.",
+      tags: ["Python", "Selenium", "Automation"],
+      category: "automation",
+      image: "/project-images/naukri.jpg", 
+      github: "https://github.com/cyberfortify/naukri-profile-updater",
+      live: "", 
+      techIcons: [<FaPython />, <SiSelenium />]
+    },
+
+    {
+      id: 3,
       title: "Employee Report App",
       description:
         "Streamlit app to generate department-wise employee reports from Excel.",
@@ -44,7 +58,7 @@ const Projects = () => {
       techIcons: [<FaPython />, <SiJupyter />],
     },
     {
-      id: 3,
+      id: 4,
       title: "Alibaba RFQ Scraper",
       description:
         "Web scraper for Alibaba RFQs using Python and BeautifulSoup.",
@@ -56,7 +70,7 @@ const Projects = () => {
       techIcons: [<FaPython />],
     },
     {
-      id: 4,
+      id: 5,
       title: "3D Website Animation",
       description: "Scroll-based 3D animation website using Three.js and GSAP.",
       tags: ["HTML", "Three.js", "GSAP"],
@@ -65,18 +79,6 @@ const Projects = () => {
       github: "https://github.com/cyberfortify/3D_Website_Animation",
       live: "https://3d-website-animation.vercel.app/",
       techIcons: [<SiHtml5 />, <SiJavascript />],
-    },
-    {
-      id: 5,
-      title: "Employee Management System",
-      description:
-        "Full-stack system with CRUD functionality using React, Flask, MySQL.",
-      tags: ["React", "Flask", "MySQL"],
-      category: "fullstack",
-      image: "/project-images/ems.png",
-      github: "https://github.com/cyberfortify/employee-management-system",
-      live: "https://employee-management-system-nu-rose.vercel.app/login",
-      techIcons: [<FaReact />, <SiFlask />, <FaDatabase />],
     },
     {
       id: 6,
@@ -123,9 +125,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className={`relative group bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden ${
-                hoveredProject === project.id ? "border-cyan-400/50" : ""
-              }`}
+              className={`relative group bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden ${hoveredProject === project.id ? "border-cyan-400/50" : ""
+                }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

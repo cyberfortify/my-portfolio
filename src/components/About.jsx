@@ -123,7 +123,7 @@ const About = () => {
               <div className="relative rounded-xl overflow-hidden border border-gray-700">
                 <div className="bg-gray-800/30 backdrop-blur-sm w-full h-80 flex items-center justify-center">
                   <img
-                    src={ profilePic}// 👈 Put your actual image path here
+                    src={profilePic}// 👈 Put your actual image path here
                     alt="Aditya Vishwakarma"
                     className="w-48 h-48 object-cover rounded-xl border-2 border-gray-600"
                   />
@@ -133,31 +133,7 @@ const About = () => {
                 <div className="absolute inset-0 border border-cyan-400/30 rounded-xl animate-pulse pointer-events-none"></div>
               </div>
 
-              {/* Floating tech badges */}
-              {techStack.map((tech, index) => (
-                <motion.div
-                  key={index}
-                  className="absolute flex items-center justify-center bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-full p-3 shadow-lg"
-                  style={{
-                    width: 60,
-                    height: 60,
-                    top: `${Math.random() * 60 + 10}%`,
-                    left: `${Math.random() * 80 + 10}%`,
-                  }}
-                  animate={{
-                    y: [0, -15, 0],
-                    rotate: [0, 5, 0],
-                  }}
-                  transition={{
-                    duration: 3 + index,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: index * 0.2,
-                  }}
-                >
-                  <div className="text-xl">{tech.icon}</div>
-                </motion.div>
-              ))}
+
 
               {/* Personal info card */}
               <div className="mt-8 bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl p-6">
@@ -182,9 +158,14 @@ const About = () => {
                   ))}
                 </div>
 
-                <button className="mt-6 w-full py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                <a
+                  href="/Aditya_Vishwakarma_resume.pdf"
+                  download
+                  className="mt-6 block text-center w-full py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg font-medium hover:opacity-90 transition-opacity"
+                >
                   Download Resume
-                </button>
+                </a>
+
               </div>
             </div>
           </motion.div>
