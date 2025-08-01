@@ -180,17 +180,11 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <p className="text-gray-300 mb-8">
-              I'm a passionate full-stack developer with over 5 years of
-              experience creating innovative digital solutions. My journey in
-              tech began with a fascination for how things work, which evolved
-              into a career building sophisticated web applications.
+              I'm a BSc IT graduate and passionate developer with hands-on experience in building full-stack web applications using React.js, Python, Flask, and MySQL. I specialize in creating dynamic, responsive UIs and robust backend systems.
             </p>
 
             <p className="text-gray-300 mb-10">
-              I specialize in creating responsive, user-friendly interfaces with
-              robust backend systems. My approach combines technical excellence
-              with creative problem-solving to deliver solutions that not only
-              meet but exceed client expectations.
+              My projects span across automation (Selenium-based tools), data analysis (Pandas, Excel), and interactive web experiences (3D animations with Three.js and GSAP). I'm actively seeking opportunities in web development, full-stack development, or as a Python developer, where I can apply my skills to real-world challenges and continue learning in a collaborative environment.
             </p>
 
             {/* <div className="mb-10">

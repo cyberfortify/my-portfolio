@@ -219,17 +219,7 @@ const ProjectPage = () => {
       <main className="container mx-auto px-4 md:px-8 py-12">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center mb-4"
-          >
-            <div className="w-3 h-3 rounded-full bg-cyan-400 mr-3 animate-pulse"></div>
-            <span className="text-cyan-400 font-mono tracking-widest text-sm">
-              PROJECT PORTFOLIO
-            </span>
-          </motion.div>
+          
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
