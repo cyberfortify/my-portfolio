@@ -188,7 +188,7 @@ const Contact = () => {
               >
                 {[
                   { icon: <FiMail className="text-lg md:text-xl" />, title: "Email", info: "work.aditya2010@gmail.com", link: "mailto:work.aditya2010@gmail.com" },
-                  { icon: <FiPhone className="text-lg md:text-xl" />, title: "Phone", info: "+1 (123) 456-7890", link: "tel:+11234567890" },
+                  { icon: <FiPhone className="text-lg md:text-xl" />, title: "Phone", info: "+91 90043 70475", link: "tel:+919004370475" },
                   { icon: <FiMapPin className="text-lg md:text-xl" />, title: "Location", info: "Mumbai, India", link: null }
                 ].map((item, index) => (
                   <motion.div
@@ -489,7 +489,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="tel:+11234567890"
+              href="tel:+919004370475"
               className="inline-flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl font-bold hover:opacity-90 transition-opacity"
             >
               <FiPhone className="mr-2" />
