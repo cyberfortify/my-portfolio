@@ -33,9 +33,7 @@ Welcome to my personal developer portfolio website built with **React.js**, **Ta
 
 | Home Page | Projects | Contact |
 |----------|----------|---------|
-| ![home](./screenshots/home.png) 
-
-> _(Replace with your actual screenshot images if needed)_
+| ![home](./home.png) 
 
 
 
