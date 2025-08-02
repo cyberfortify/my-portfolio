@@ -29,14 +29,6 @@ Welcome to my personal developer portfolio website built with **React.js**, **Ta
 
 
 
-## 📸 Screenshots
-
-| Home Page | Projects | Contact |
-|----------|----------|---------|
-| ![home](./home.png) 
-
-
-
 ## 📩 Contact Form Setup
 
 This project uses **EmailJS** to send contact form submissions to your email inbox.
